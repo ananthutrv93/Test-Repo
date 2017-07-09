@@ -1,0 +1,7 @@
+#Basic IFS example
+#Internal field separator
+#sample program to read words one by one from a txt file using while loop
+#ab.txt contains " Hi I am new to Github"
+while IFS=' ' read key; do
+	echo $key
+done < ab.txt
