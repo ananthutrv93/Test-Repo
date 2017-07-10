@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Trying out all possibilities in Github.
 =======
 Trying out all possible things in Github.
 >>>>>>> branch-2
+=======
+
+>>>>>>> 370287c11cd843757b6853878ce9a4d394dcea64
