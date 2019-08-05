@@ -13,8 +13,8 @@ pipeline {
           when {
             branch 'master'
           }
-          lock(inversePrecedence: true, resource: 'Master') {
-            steps {        
+          steps {        
+              lock(inversePrecedence: true, resource: 'Master') {
               sh 'sleep 20'
             }
            }
