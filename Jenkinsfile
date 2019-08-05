@@ -1,11 +1,6 @@
 pipeline {
     agent any
     options {
-        [$class: 'BuildBlockerProperty',
-        blockLevel: 'NODE',
-        blockingJobs: '^master \\(pipeline\\)/.*','^Branch \\(pipeline\\)/.*',
-        scanQueueFor: 'ALL',
-        useBuildBlocker: true],
         disableConcurrentBuilds()
     }
     stages {
