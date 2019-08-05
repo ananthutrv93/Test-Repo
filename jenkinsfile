@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    options {
+        skipDefaultCheckout()
+    }
+    stages {
+        stage('checkout') {
+          steps {
+            checkout scm
+            }
+        }
+        stage('master') {
+          when {
+            branch 'master'
+          }
+          steps {
+            sh 'sleep 20'
+          }
+        }
+        stage('branch') {
+          when {
+            branch 'branchname'
+          }
+          steps {
+            sh 'sleep 20'
+          }
+         }
+     }
+}
+          
