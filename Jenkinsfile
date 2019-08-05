@@ -22,7 +22,7 @@ pipeline {
             branch 'Branch-1'
           }
           steps {
-            sh 'sleep 20'
+            sh 'sleep 100'
           }
          }
      }
