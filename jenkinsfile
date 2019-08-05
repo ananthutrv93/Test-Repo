@@ -3,6 +3,14 @@ pipeline {
     options {
         skipDefaultCheckout()
     }
+    properties([
+        [$class: 'BuildBlockerProperty',
+        blockLevel: 'NODE',
+        blockingJobs: '^test \\(pipeline\\)/.*',
+        scanQueueFor: 'ALL',
+        useBuildBlocker: true],
+        disableConcurrentBuilds()
+    ])
     stages {
         stage('checkout') {
           steps {
