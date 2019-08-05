@@ -1,16 +1,13 @@
 pipeline {
     agent any
     options {
-        skipDefaultCheckout()
-    }
-    properties([
         [$class: 'BuildBlockerProperty',
         blockLevel: 'NODE',
-        blockingJobs: '^test \\(pipeline\\)/.*',
+        blockingJobs: '^master \\(pipeline\\)/.*','^Branch \\(pipeline\\)/.*',
         scanQueueFor: 'ALL',
         useBuildBlocker: true],
         disableConcurrentBuilds()
-    ])
+    }
     stages {
         stage('checkout') {
           steps {
