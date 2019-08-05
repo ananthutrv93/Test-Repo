@@ -27,7 +27,7 @@ pipeline {
         }
         stage('branch') {
           when {
-            branch 'branchname'
+            branch 'Branch-1'
           }
           steps {
             sh 'sleep 20'
